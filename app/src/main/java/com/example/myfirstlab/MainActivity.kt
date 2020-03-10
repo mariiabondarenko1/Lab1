@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         initAdding()
         initSubtraction()
+
     }
 
     private fun convertResult(number: Double) : String{    //function of converting decimal result
@@ -36,8 +37,7 @@ class MainActivity : AppCompatActivity() {
             result.text = "Заполните два поля!"
         }else{
             val(number1, number2) = getNumbers()
-            val resultOfAdding = number1 + number2
-            result.text = convertResult(java.lang.Double.valueOf(resultOfAdding))
+            result.text = convertResult(java.lang.Double.valueOf(number1 + number2))
         }
     }
 
@@ -46,8 +46,7 @@ class MainActivity : AppCompatActivity() {
             result.text = "Заполните два поля!"
         }else {
             val (number1, number2) = getNumbers()
-            val resultOfSubtraction = number1 - number2
-            result.text = convertResult(java.lang.Double.valueOf(resultOfSubtraction))
+            result.text = convertResult(java.lang.Double.valueOf(number1 - number2))
         }
     }
 
@@ -56,8 +55,7 @@ class MainActivity : AppCompatActivity() {
             result.text = "Заполните два поля!"
         }else {
             val (number1, number2) = getNumbers()
-            val resultOfMultiplication = number1 * number2
-            result.text = convertResult(java.lang.Double.valueOf(resultOfMultiplication))
+            result.text = convertResult(java.lang.Double.valueOf(number1 * number2))
         }
     }
 
@@ -69,8 +67,7 @@ class MainActivity : AppCompatActivity() {
             if (number2 == 0.toDouble()) {
                 result.text = "Делить на 0 нельзя"
             } else {
-                val resultOfDivision = number1 / number2
-                result.text = convertResult(java.lang.Double.valueOf(resultOfDivision))
+                result.text = convertResult(java.lang.Double.valueOf(number1 / number2))
             }
         }
     }
